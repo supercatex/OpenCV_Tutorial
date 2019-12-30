@@ -31,11 +31,11 @@ while camera.isOpened():
     cv2.imshow("frame", image)
 
     key_code = cv2.waitKey(1)
-    if key_code == 27:
+    if key_code == 27:          # ESC to quit the program.
         break
-    elif key_code == ord('q'):
+    elif key_code == ord('q'):  # 'q' to clear the screen.
         canvas = None
-    elif key_code == 32:
+    elif key_code == 32:        # Hold space to draw.
         canvas = cv2.bitwise_or(canvas, mask)
         cv2.waitKey(1)
     print(key_code)
