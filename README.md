@@ -1,6 +1,6 @@
 # OpenCV_Tutorial
 
-![image](https://github.com/supercatex/OpenCV_Tutorial/blob/master/images/sample_01.jpg)
+![image](https://github.com/supercatex/OpenCV_Tutorial/blob/master/images/sample.png)
 
 ### Setup Guide
 * numpy
