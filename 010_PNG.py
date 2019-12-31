@@ -11,7 +11,7 @@ print("IMG 2:", img2.shape)
 cv2.imshow("img2", img2)
 cv2.waitKey(0)
 
-cascade = cv2.CascadeClassifier("./haarcascades/haarcascade_frontalface_default.xml")
+cascade = cv2.CascadeClassifier(cv2.haarcascades + "haarcascade_frontalface_default.xml")
 
 gray = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 
