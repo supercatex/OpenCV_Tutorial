@@ -9,7 +9,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow("My image", gray)
 cv2.waitKey(0)
 
-cascade = cv2.CascadeClassifier("./haarcascades/haarcascade_frontalcatface.xml")
+cascade = cv2.CascadeClassifier(cv2.haarcascades + "haarcascade_frontalcatface.xml")
 
 faces = cascade.detectMultiScale(gray)
 for (x, y, w, h) in faces:
