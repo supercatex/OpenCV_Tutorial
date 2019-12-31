@@ -1,7 +1,7 @@
 import cv2
 
 
-cascade = cv2.CascadeClassifier("./haarcascades/haarcascade_frontalface_default.xml")
+cascade = cv2.CascadeClassifier(cv2.haarcascades + "haarcascade_frontalface_default.xml")
 
 camera = cv2.VideoCapture(0)
 
