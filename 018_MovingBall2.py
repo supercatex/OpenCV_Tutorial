@@ -6,11 +6,12 @@ image_w = 640
 image_h = 480
 
 
-def create_ball(r, c, vx, vy):
+def create_ball(r, c, vx, vy, color):
     ball = {
         "r": r,
         "center": c,
-        "vx": vx, "vy": vy
+        "vx": vx, "vy": vy,
+        "color": color
     }
     return ball
 
@@ -22,15 +23,16 @@ for i in range(100):
     ry = np.random.randint(0, image_h)
     rvx = np.random.randint(-3, 3 + 1)
     rvy = np.random.randint(-3, 3 + 1)
-    b = create_ball(rr, (rx, ry), rvx, rvy)
+    color = (np.random.randint(0, 256), np.random.randint(0, 256), np.random.randint(0, 256))
+    b = create_ball(rr, (rx, ry), rvx, rvy, color)
     ball_list.append(b)
 
 while True:
-    image = np.zeros((image_h, image_w), dtype=np.uint8)
+    image = np.zeros((image_h, image_w, 3), dtype=np.uint8)
     image[:, :] = 255
 
     for b in ball_list:
-        cv2.circle(image, b["center"], b["r"], 0, 3)
+        cv2.circle(image, b["center"], b["r"], b["color"], 3)
 
     cv2.imshow("image", image)
 
